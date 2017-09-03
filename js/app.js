@@ -36,7 +36,7 @@ $(document).ready(function() {
 
   // header mouse anim click
   $('.mouse').click(function(event) {
-      $('html, body').animate({scrollTop: 826}, 500);
+      $('html, body').animate({scrollTop: 730}, 500);
       event.preventDefault();
   });
 

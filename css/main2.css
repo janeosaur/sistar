@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Cabin|Raleway|Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Cabin|Martel+Sans');
 
 /* C S S  R E S E T S */
 html, body, div, span, applet, object, iframe,
@@ -50,12 +50,15 @@ table {
 /* E N D  C S S  R E S E T S*/
 
 body {
-  font-family: 'Raleway';
+  font-family: 'Martel Sans';
 }
 
 a, a:hover, a:visited, a:focus {
   text-decoration: none;
-  color: black;
+}
+
+.row {
+	width: 100%;
 }
 
 header {
@@ -96,11 +99,9 @@ header {
 }
 
 .sticky {
-  /*background-color: rgba(255, 255, 255, 0.93);*/
-	background-color: #fff;
+	background-color: #d51921;
   opacity: 1;
   top: 0px;
-  border-bottom: 1px solid gainsboro;
 }
 
 .logo {
@@ -141,12 +142,21 @@ nav ul li {
   display: inline-block;
   margin-left: 35px;
   line-height: 1.5;
+	padding-bottom: 19px;
 }
 
 nav ul a {
-  color: #888888;
+  color: #fff;
   text-transform: uppercase;
   font-size: 1.8em;
+}
+
+nav ul li:hover {
+	border-bottom: 4px solid #000;
+}
+
+nav ul li:hover a {
+	color: #aaa;
 }
 
 .mobile-toggle span {
@@ -184,31 +194,38 @@ nav ul a {
 	#street {
 		display: none;
 	}
+
 }
 
+@media only screen and (min-width: 768px) and (max-width:1092px){
+	.menu-item {
+		padding: 15px!important;
+	}
+}
 .hero {
   position: relative;
-  background-image: url('../images/crabtray.png');
+  background-image: url('../images/crabs1.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
   text-align: center;
   color: #fff;
   padding-top: 110px;
-  min-height: 400px;
+	height: 600px;
   letter-spacing: 2px;
+	font-weight: 900;
 }
 
 .hero h3 {
-  font-size: 3em;
+	padding-top: 100px;
+  font-size: 4.5em;
   opacity: 0;
   animation: opacity-anim 0.5s ease 1s 1 forwards;
   -webkit-animation: opacity-anim 0.5s ease 1s 1 forwards;
 }
 
 .hero h1 {
-  font-weight: 900;
-  font-size: 4.5em;
+  font-size: 6em;
   line-height: 1.2;
   letter-spacing: 3px;
   opacity: 0;
@@ -225,7 +242,7 @@ nav ul a {
   width: 26px;
   height: 46px;
   border-radius: 13px;
-  border: 2px solid #e8f380;
+  border: 4px solid #fff;
   margin-left: -26px;
 	opacity: 0;
 	animation: opacity-anim 1s ease 2.5s 1 forwards;
@@ -239,7 +256,7 @@ nav ul a {
   width: 4px;
   height: 8px;
   border-radius: 4px;
-  background: #fff;
+  background: #d51921;
   border: 1px solid transparent;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -253,7 +270,7 @@ nav ul a {
 
 footer {
 	background-color: #3c342f;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
   padding: 20px 0;
   font-size: 14px;
@@ -265,95 +282,114 @@ footer {
   bottom: 0; left: 0;
 }
 
+footer a:hover,
+footer a:visited,
+footer a:focus {
+	color: #fff;
+}
+
 section#menu {
-	background-color: #eee;
+	margin-top: 200px;
+	text-align: center;
 }
 
-.box {
-  background: #ffffff;
-  border: 3px solid #222222;
-  text-align: center;
-	margin: 25px;
+.intro {
+	text-transform: uppercase;
+  font-weight: 900;
+  font-size: 10em;
+	margin: 0 auto;
+	padding-top: 20px;
+	width: 50%;
+	position: relative;
 }
 
-.menu-title {
+.intro:after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 40%;
+  border-bottom: 5px solid #d51921;
+}
+
+.menu-section {
+	margin: 50px 0;
+}
+
+.except {
+	font-size: 0.8em;
+	text-align: left;
+}
+
+.menu-section h1 {
   font-size: 3em;
-  font-weight: 800;
-  line-height: 1;
-  padding: 20px 0 10px 0
+  padding: 0 0 0 50px;
+	text-align: left;
+	font-weight: 900;
+	font-size: 4em;
 }
 
 .menu-desc {
-  font-size: 1.7em;
+	text-align: left;
+  font-size: 1.4em;
+	padding: 0 0 20px 0;
+	font-weight: 800;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.menu-desc p {
+	padding: 10px 0 0 0;
 }
 
 .menu-body {
-	padding: 20px 0;
-	font-size: 1.5em;
-	letter-spacing: 1.2px;
+	padding: 10px 0 0 0;
+	font-size: 2em;
+	text-align: left;
 }
 
 .menu-item {
-  font-size: 1.3em;
-  margin: 10px 0;
-	padding: 0 0 5px;
-	border-bottom: 1px solid black;
+	padding: 15px 80px;
 }
 
-.menu-item-desc i {
-  margin: 0 10px;
+.menu-item-desc {
+	color: #693115;
+}
+
+.menu-item-desc p {
+	margin: 5px 0 0 40px;
+	font-style: italic;
+	color: #414141;
+	font-size: 0.8em;
+}
+
+.menu-item-desc span {
+	margin-left: 10px;
 }
 
 .menu-item-price {
-  /*float: right;*/
+	color: #d51921;
 }
 
-.menu-intro {
-	height: 300px;
-	background-color: #C25E3D;
-	padding: 50px 100px;
-}
+.seafood {
 
-.menu-intro div {
-	border: 2px solid #fff;
-	height: 200px;
-}
-
-section#about {
-	margin-top: 100px;
-}
-
-#about .box-content {
-	padding: 50px;
-	font-size: 3em;
-}
-
-#about .box-banner {
-	padding: 22px;
-	border-bottom: 3px solid #222222;
-	/*background-image: url('https://s3.amazonaws.com/getbento-theme-assets/sacksandwiches/initial/assets/images/lines.png');*/
-	background: url('../images/dots.png');
-	background-color: #D6F2E9;
 }
 
 #reviews {
-
-}
-
-
-
-section #sides {
-
+	height: 500px;
 }
 
 section#location {
-	position: relative;
-	padding-top: 20px;
+
+}
+
+#location .row {
+	margin-top: 100px;
 }
 
 #map {
 	width: 100%;
-	height: 350px;
+	height: 400px;
 }
 
 #floating-panel {
@@ -367,35 +403,46 @@ section#location {
 	width: auto;
 }
 
-#floating-panel:hover {
-	background-color: #FFF1BC;
+#location .info {
+	font-size: 1.7em;
+	padding: 20px 20px 20px 50px;
+	text-align: left;
+	/*color: #eb4736*/
 }
 
-#location .info {
-	font-size: 2em;
-	padding: 20px;
-	text-align: center;
-	font-family: 'Montserrat';
-	color: #eb4736
+#location .info h3 {
+	font-weight: 900
 }
 
 #location .info div {
-	margin: 30px 0;
+	margin: 20px 0;
 }
 
 #location .phone {
-	color: #693115
+	/*color: #693115*/
 }
 
-#location .hours p {
-	padding: 10px 0;
+#location .hours {
+	padding-top: 10px;
+}
+
+.hours ul li {
+	list-style: none;
+}
+.hours li strong {
+	float: left;
+	width: 100px;
+}
+
+.hours li {
+	padding: 5px 0 0 0;
+}
+
+.address p {
+	margin: 5px 0;
 }
 
 /*general*/
-.small {
-	font-size: 0.8em;
-	color: #0043ff;
-}
 
 .clearfix:before, .clearfix:after {
   content: "";
