@@ -6,7 +6,7 @@
     <!-- Bootstrap - Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <!-- font awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- custom css -->
     <link rel="stylesheet" href="css/main2.css">
     <!-- scripts -->
@@ -19,50 +19,35 @@
   <body>
 
     <header>
-      <a class="logo" href="#">
-        <img src="images/logo-small.png" alt="">
-      </a>
-      <div class="mobile-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
+      <div class="nav-container">
+        <span class="logo">SiStar Seafood</span>
+        <div class="mobile-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#menu">MENU</a></li>
+            <li><a href="#seafood">SEAFOOD</a></li>
+            <li><a href="#location">LOCATION</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav>
-        <ul>
-          <li><a href="menu">MENU</a></li>
-          <li><a href="location">LOCATION</a></li>
-          <!-- <li><a href="about">ABOUT</a></li> -->
-        </ul>
-      </nav>
     </header>
 
-    <!-- <section class="module parallax parallax-1">
-      <div class="container">
-        <h1>Serene</h1>
-      </div>
-    </section>
-
-    <section class="module content">
-      <div class="container">
-        <h2>Lorem Ipsum Dolor</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      </div>
-    </section> -->
-
-
     <div class="hero">
+      <img src="images/logo-small.png" alt="">
       <h3>WELCOME TO</h3>
       <h1>SISTAR SEAFOOD</h1>
       <div class="mouse"><span></span></div>
     </div>
 
-    <section id="menu">
+
+    <section id="menu" class="info">
       <h1 class="intro">MENU</h1>
       <div class="menu-section">
-        <h1>A LA CARTE</h1>
-        <div class="menu-desc">
-          Served all day
-        </div>
+        <h1>A LA CARTE <span class="served">[ served all day ]</span> </h1>
         <div class="menu-body container-fluid">
           <div class="row">
             <div class="col-md-5 col-10 offset-1 menu-item clearfix">
@@ -230,12 +215,10 @@
         </div>
       </div>
       <div class="menu-section">
-        <h1>LUNCH SPECIALS</h1>
+        <h1>LUNCH SPECIALS <span class="served">[ served until 3pm ]</span></h1>
         <div class="menu-desc">
-          <p>Served until 3pm.</p>
-          <p> With your choice of two sides...
-          <!-- <p>Choice of two sides: -->
-          <span style="text-transform: uppercase";>french fries,  cole slaw,  rice ,  kimchi, tater tots (<span class="small">+75&#x23c;</span>), onion rings (<span class="small">+75&#x23c;</span>), hush puppies (<span class="small">+75&#x23c;</span>)</span></p>
+          <p> Served with your choice of two sides...</p>
+          <p>french fries &#x25B0; cole slaw &#x25B0; rice &#x25B0; kimchi &#x25B0; tater tots <span class="small">(+75&#x23c;)</span> &#x25B0; onion rings <span class="small">(+75&#x23c;)</span> &#x25B0; hush puppies <span class="small">(+75&#x23c;)</span></p>
         </div>
         <div class="menu-body container-fluid">
           <div class="row">
@@ -251,7 +234,7 @@
             <div class="col-md-5 offset-md-0 col-10 offset-1 menu-item clearfix">
               <div class="menu-item-desc pull-left">
                 L2 <span>Shrimp</span>
-                <p>8 fried  a shrimp</p>
+                <p>8 fried shrimp</p>
               </div>
               <div class="menu-item-price pull-right">
                 $5.99
@@ -284,13 +267,12 @@
             </div>
           </div>
         </div>
-      </div> <!-- menu-section -->
+      </div>
       <div class="menu-section">
-        <h1>DINNER SPECIALS</h1>
+        <h1>DINNER SPECIALS <span class="served">[ served all day ]</span></h1>
         <div class="menu-desc">
-          <p>Served all day. </p>
-          <p>Pick two sides:</p>
-          <p>french fries, cole slaw, rice, kimchi, tater tots <span class="small">+75&#x23c;</span>, onion rings <span class="small">+75&#x23c;</span>, hush puppies <span class="small">+75&#x23c;</span> </p>
+          <p> Served with your choice of two sides...</p>
+          <p>french fries &#x25B0; cole slaw &#x25B0; rice &#x25B0; kimchi &#x25B0; tater tots <span class="small">(+75&#x23c;)</span> &#x25B0; onion rings <span class="small">(+75&#x23c;)</span> &#x25B0; hush puppies <span class="small">(+75&#x23c;)</span></p>
         </div>
         <div class="menu-body container-fluid">
           <div class="row">
@@ -433,14 +415,14 @@
             </div>
           </div>
         </div>
-      </div> <!-- menu-section -->
-      <div class="menu-section">
-        <h1>FRESH SEAFOOD</h1>
-        <div class="menu-desc">
-          <p>We offer a variety of fresh fish and seafood. Selection and price may vary with season.</p>
-        </div>
-        <div class="seafood">
+      </div>
+    </section>
 
+    <section id="seafood">
+      <h1 class="intro">FRESH SEAFOOD</h1>
+      <div class="menu-section">
+        <div class="seafood">
+          <p>We offer a variety of fresh fish and seafood. Selection and price may vary with season.</p>
           <p>Blue Crabs</p>
           <p>Snow Crab Legs</p>
           <p>Shrimp</p>
@@ -452,18 +434,22 @@
         </div>
       </div>
     </section>
-    <section id="location" class="container-fluid">
+
+    <section id="location" class="container">
       <h1 class="intro">LOCATION</h1>
       <div class="row">
-        <div class="col-12 col-md-5 info">
+        <div class="col-12 col-md-4 info">
           <div class="address">
             <h3>4844 S LABURNUM AVE</h3>
-            <!-- <p>4844 S Laburnum Ave</p> -->
             <p>Richmond, VA 23231</p>
-            <a href="https://www.google.com/maps/place/SiStar+Seafood/@37.5184916,-77.3539561,17z/data=!3m1!4b1!4m5!3m4!1s0x89b11a4347a9b19b:0x94e548f1ff7c604e!8m2!3d37.5184916!4d-77.3517621">Get Directions</a>
+            <p><i class="fa fa-map-o" aria-hidden="true"></i> <a href="http://bit.ly/2gxbCsH">Get Directions</a></p>
           </div>
-          <div class="phone">
-            <p><i class="fa fa-phone" aria-hidden="true"></i> (804) 236-3474</p>
+          <div class="">
+            <p> <i class="fa fa-phone" aria-hidden="true"></i> (804) 236 - 3474</p>
+          </div>
+          <div class="socials">
+            <a href="https://www.facebook.com/SistarSeafood/"><i class="fa fa-facebook"></i></a>
+            <a href="https://www.yelp.com/biz/sistar-seafood-henrico"><i class="fa fa-yelp"></i></a>
           </div>
           <ul class="hours clearfix">
             <li><strong>MON</strong> 11 AM - 8 PM</li>
@@ -472,25 +458,21 @@
             <li><strong>THU</strong> 11 AM - 8 PM</li>
             <li><strong>FRI</strong> 11 AM - 8 PM</li>
             <li><strong>SAT</strong> 11 AM - 8 PM</li>
-            <li><strong>SUN</strong> CLOSED</li>
+            <li><strong>SUN</strong> <span style="color: #eb4736">CLOSED</span></li>
           </ul>
-        </div> <!-- .info -->
-        <div class="col-12 col-md-7 map">
+        </div>
+        <div class="col-12 col-md-8 map">
             <img src="images/street.png" id="floating-panel" alt="">
             <div id="map"></div>
-        </div> <!-- .map -->
+        </div>
       </div>
-
     </section>
-
-    <section id="reviews">
-      <h3>See what people are saying</h3>
-    </section>
-
 
     <footer>
-      Made by <a href="http://janeosaur.me">JW</a>
+      <div class="mouse" id="toTop"><a href="#"><span></span></a></div>
+      <p>&copy; 2017 | <a href="http://janeosaur.me">JW</p>
     </footer>
+
 
     <!-- Google Maps API -->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHLett8djBo62dDXj0EjCimF8Rd6E8cxg"></script>

@@ -1,11 +1,34 @@
 $(document).ready(function() {
 
   $(window).scroll(function() {
-      if ($(window).scrollTop() > 100) {
-          $('header').addClass('sticky'); // shows navbar when scrolled down
+      var scrollPos = $(document).scrollTop();
+
+      // nav bar changes on scroll
+      if (scrollPos > 100) {
+          $('header').addClass('sticky');
+          $('header img').addClass('move');
+          $('nav span').removeClass('movetext');
       } else {
           $('header').removeClass('sticky');
+          $('header img').removeClass('move');
+          $('nav span').addClass('movetext');
       }
+
+      // add class active to nav a on scroll
+      // $('nav a').each(function () {
+      //   console.log('scroll');
+      //     var currLink = $(this);
+      //     var refElement = $(currLink.attr("href")).position().top;
+      //     if (refElement <= (scrollPos+100)) {
+      //         $('nav a').removeClass("active");
+      //         currLink.addClass("active");
+      //     }
+      //     // remove active class when at header
+      //     if (scrollPos < 650) {
+      //         $('nav a').removeClass('active')
+      //     }
+      // });
+
   });
 
   // Mobile Navigation
@@ -24,15 +47,23 @@ $(document).ready(function() {
   });
 
   // navigation scroll
-  $('nav a').click(function(event) {
-      var id = '#'+$(this).attr("href");
-      var offset = 70;
-      var target = $(id).offset().top - offset;
-      $('html, body').animate({
-          scrollTop: target
+  $('nav a').click(function () {
+      var $href = $(this).attr('href');
+      $('body').stop().animate({
+          scrollTop: $($href).offset().top
       }, 500);
-      event.preventDefault();
+      return false;
   });
+
+  // back to top
+  $('.logo, #toTop').click(function () {
+      $('body').animate({
+          scrollTop: 0
+      }, 1000);
+      return false;
+  });
+
+// Parallaxing + add class active on scroll
 
   // header mouse anim click
   $('.mouse').click(function(event) {
