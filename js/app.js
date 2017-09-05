@@ -14,6 +14,11 @@ $(document).ready(function() {
           $('nav span').addClass('movetext');
       }
 
+      // Parallaxing on scroll
+      var $movebg = $(window).scrollTop() * -0.5;
+      $('.hero').css('background-positionY', ($movebg) + 'px');
+
+
       // add class active to nav a on scroll
       // $('nav a').each(function () {
       //   console.log('scroll');
@@ -49,8 +54,9 @@ $(document).ready(function() {
   // navigation scroll
   $('nav a').click(function () {
       var $href = $(this).attr('href');
+      var offset = $($href).offset().top - 65;
       $('body').stop().animate({
-          scrollTop: $($href).offset().top
+          scrollTop: offset
       }, 500);
       return false;
   });
@@ -62,8 +68,6 @@ $(document).ready(function() {
       }, 1000);
       return false;
   });
-
-// Parallaxing + add class active on scroll
 
   // header mouse anim click
   $('.mouse').click(function(event) {
