@@ -115,7 +115,7 @@ a, a:hover, a:visited, a:focus {
   width: 26px;
   height: 46px;
   border-radius: 13px;
-  border: 3px solid #fff;
+  border: 3px solid #eee;
   margin-left: -26px;
 	opacity: 0;
 	animation: opacity-anim 1s ease 2.5s 1 forwards;
@@ -129,7 +129,7 @@ a, a:hover, a:visited, a:focus {
   width: 4px;
   height: 8px;
   border-radius: 4px;
-  background: #fff;
+  background: #eee;
   border: 1px solid transparent;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -545,7 +545,7 @@ footer .mouse span {
 }
 
 
-@media only screen and (max-width: 766px) {
+@media only screen and (max-width: 768px) {
 	header {
 		padding-top: 25px;
 	}
@@ -575,7 +575,28 @@ footer .mouse span {
 	}
 }
 
-@media only screen and (min-width: 768px) and (max-width:1092px){
+/* iPhone 6 */
+@media only screen and (max-device-width : 667px) {
+	.hero {
+		background: none;
+		height: 0px;
+		padding: 0;
+	}
+	.main {
+		background: url('../images/crabs1.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 400px;
+		width: 100%;
+	}
+	.mouse {
+		display: none;
+	} 
+}
+
+@media only screen
+and (min-width: 768px)
+and (max-width:1092px){
 	.menu-item {
 		padding: 15px!important;
 	}
