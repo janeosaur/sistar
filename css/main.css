@@ -155,7 +155,7 @@ section h1.intro {
 	padding-top: 20px;
 	font-style: italic;
 	position: relative;
-	font-family: 'Bungee Shade'
+	font-family: 'Bungee Shade';
 }
 
 .menu-section {
@@ -169,6 +169,7 @@ section h1.intro {
 
 .served {
 	font-size: 0.4em;
+	color: #808080;
 }
 
 .menu-section h1 {
@@ -176,6 +177,7 @@ section h1.intro {
 	text-align: left;
 	font-weight: 900;
 	font-size: 2.5em;
+	/*color: #ff7724;*/
 }
 
 .menu-desc {
@@ -200,7 +202,8 @@ section h1.intro {
 }
 
 .menu-item-desc {
-	color: #693115;
+	/*color: #693115;*/
+	color: #c84e03;
 }
 
 .menu-item-desc p {
@@ -215,7 +218,8 @@ section h1.intro {
 }
 
 .menu-item-price {
-	color: #d51921;
+	/*color: #d51921;*/
+	color: black;
 }
 
 /* SEAFOOD */
@@ -226,7 +230,7 @@ section h1.intro {
 #seafood .info {
 	text-align: center;
 	padding: 30px 0 0 50px;
-	color: #693115
+	color: #693115;
 }
 #seafood p {
 	color: #000;
@@ -287,7 +291,7 @@ section h1.intro {
 }
 #location .info h3 {
 	font-weight: 900;
-	color: #d51921;
+	color: #ff6657;
 }
 #location .info div {
 	margin: 20px 0;
@@ -316,7 +320,7 @@ section h1.intro {
 }
 .socials a {
 	text-align: center;
-	background: #d51921;
+	background: #ff9757;
 	width: 36px;
 	height: 36px;
 	line-height: 40px;
@@ -327,6 +331,11 @@ section h1.intro {
 .socials i {
 	color: #fff
 }
+
+.socials a:hover {
+	background: #d51921;
+}
+
 /*general*/
 
 .clearfix:before, .clearfix:after {
@@ -490,7 +499,7 @@ nav ul a:hover {
 }
 
 footer {
-	margin-top: 10px;
+	margin-top: 100px;
 	background: #777;
   color: #fff;
   text-align: center;
