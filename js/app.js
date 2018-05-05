@@ -55,17 +55,19 @@ $(document).ready(function() {
   $('nav a').click(function () {
       var $href = $(this).attr('href');
       var offset = $($href).offset().top - 65;
-      $('body').stop().animate({
-          scrollTop: offset
-      }, 500);
+      window.scroll({
+        top: offset,
+        behavior: 'smooth'
+      });
       return false;
   });
 
   // back to top
   $('.logo, #toTop').click(function () {
-      $('body').animate({
-          scrollTop: 0
-      }, 1000);
+      window.scroll({
+        top: 0,
+        behavior: 'smooth'
+      });
       return false;
   });
 
